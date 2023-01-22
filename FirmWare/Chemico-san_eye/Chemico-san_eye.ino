@@ -47,7 +47,7 @@ void setup() {
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
   config.pixel_format = PIXFORMAT_RGB888;
-  config.frame_size = FRAMESIZE_SVGA;
+  config.frame_size = FRAMESIZE_VGA;
   config.fb_count = 1;
 
 #if defined(CAMERA_MODEL_ESP_EYE)
@@ -80,7 +80,8 @@ void setup() {
   s->set_hmirror(s, 1);
 #endif
 
-  WiFi.setHostname("camera01r");
+//  WiFi.setHostname("eye01r");
+  WiFi.setHostname("eye01l");
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);

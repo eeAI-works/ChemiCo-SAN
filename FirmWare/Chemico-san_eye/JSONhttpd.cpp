@@ -44,11 +44,11 @@
 
 WebServer server(80);
 
-const int max_x = 800;
-const int max_y = 600;
+const int max_x = 640;
+const int max_y = 480;
 const int px = 48;
 const int py = 48;
-const int max_zoom = 12; // min(max_x / px , max_y / py) 
+const int max_zoom = 10; // min(max_x / px , max_y / py) 
 const String pix_format = "RGB888";
 
 void handleRoot() {
